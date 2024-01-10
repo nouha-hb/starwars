@@ -1,0 +1,48 @@
+# Star Wars Flutter Project
+
+## Overview
+
+The Star Wars Flutter Project is a mobile application developed using the Flutter framework. It provides information about Star Wars movies, including details such as titles, release dates, directors, and more.
+
+## Project Structure
+
+The project follows the principles of Clean Architecture, which promotes separation of concerns, maintainability, and testability. The codebase is organized into different layers:
+
+1. **Presentation Layer:**
+   - Located in the `presenter` directory.
+   - Contains the UI components, screens, and controllers.
+   - Uses the GetX package for state management.
+
+2. **Domain Layer:**
+   - Located in the `domain` directory.
+   - Represents the business logic and use cases of the application.
+   - Contains entities, use cases, and repositories.
+
+3. **Data Layer:**
+   - Located in the `data` directory.
+   - Handles data retrieval and storage.
+   - Utilizes models and repositories for data management.
+   - Integrates with external data sources 
+
+4. **Dependency Injection (DI):**
+   - Dependency injection is implemented using the GetIt package.
+   - Services and dependencies are registered and injected where needed.
+
+## Clean Architecture Principles
+
+1. **Separation of Concerns:**
+   - Each layer has a distinct responsibility, making the codebase modular and maintainable.
+
+2. **Dependency Rule:**
+   - Dependencies point inwards. Outer layers are dependent on inner layers.
+   - Core business logic is independent of external frameworks and libraries.
+
+3. **Testability:**
+   - Business logic is isolated in the domain layer, making it easy to test without UI dependencies.
+
+## Project state manager
+
+The project is developed using GetX state management.
+
+
+
