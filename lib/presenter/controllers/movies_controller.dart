@@ -6,7 +6,7 @@ import 'package:starwars/domain/usecases/get_all_movies_usecase.dart';
 class MoviesController extends GetxController {
   final RxList<Movie> moviesList = <Movie>[].obs;
   final RxInt count = 0.obs;
-   bool isLoading = false;
+  bool isLoading = false;
 
   @override
   void onInit() {
@@ -26,9 +26,6 @@ class MoviesController extends GetxController {
           // Handle failure as needed
         },
         (movies) {
-          print("Right success: ${movies.count}");
-          print("Right success: ${movies.results}");
-
           // Update the observable variables
           moviesList.assignAll(movies.results ?? []);
 

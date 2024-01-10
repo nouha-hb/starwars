@@ -1,11 +1,7 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 import 'package:starwars/core/style/colors.dart';
 import 'package:starwars/core/style/text_style.dart';
-import 'package:starwars/presenter/screens/movies_screen/movie_description_screen.dart';
 
 // ignore: must_be_immutable
 class MovieComponent extends StatelessWidget {

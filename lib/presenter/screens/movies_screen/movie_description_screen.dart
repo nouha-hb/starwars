@@ -14,11 +14,7 @@ class MovieDescription extends StatelessWidget {
   // Function to convert date strings to the desired format
   String formatDate(String? dateString) {
     if (dateString == null) return '';
-
-    // Parse the date string
     DateTime date = DateTime.parse(dateString);
-
-    // Format the date as "year/month/day"
     return DateFormat('yyyy/MM/dd').format(date);
   }
 
@@ -64,9 +60,9 @@ class MovieDescription extends StatelessWidget {
                               "Release date",
                               style: AppTextStyle.movieComponentSmallTextStyle,
                             ),
-                             SizedBox(
-                      height: 8.h,
-                    ),
+                            SizedBox(
+                              height: 8.h,
+                            ),
                             Text(
                               formatDate(movie.releaseDate!).toString(),
                               style: AppTextStyle.movieComponentDescTextStyle,
@@ -80,18 +76,20 @@ class MovieDescription extends StatelessWidget {
                               "Director ",
                               style: AppTextStyle.movieComponentSmallTextStyle,
                             ),
-                               SizedBox(
-                      height: 8.h,
-                    ),
-                              Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: movie.director!.split(',').map((producer) {
-                    return Text(
-                      producer.trim(),
-                      style: AppTextStyle.movieComponentDescTextStyle,
-                    );
-                  }).toList(),
-                ),
+                            SizedBox(
+                              height: 8.h,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children:
+                                  movie.director!.split(',').map((producer) {
+                                return Text(
+                                  producer.trim(),
+                                  style:
+                                      AppTextStyle.movieComponentDescTextStyle,
+                                );
+                              }).toList(),
+                            ),
                           ],
                         ),
                         Column(
@@ -102,16 +100,20 @@ class MovieDescription extends StatelessWidget {
                               "Producer ",
                               style: AppTextStyle.movieComponentSmallTextStyle,
                             ),
-                            SizedBox(height: 8.h,),
+                            SizedBox(
+                              height: 8.h,
+                            ),
                             Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: movie.producer!.split(',').map((producer) {
-                    return Text(
-                      producer.trim(),
-                      style: AppTextStyle.movieComponentDescTextStyle,
-                    );
-                  }).toList(),
-                ),
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children:
+                                  movie.producer!.split(',').map((producer) {
+                                return Text(
+                                  producer.trim(),
+                                  style:
+                                      AppTextStyle.movieComponentDescTextStyle,
+                                );
+                              }).toList(),
+                            ),
                           ],
                         ),
                       ],
